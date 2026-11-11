@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갓차갓차 GotchaGotcha</title>
+  <meta name="description" content="손가락 하나로 정하는 파티 추첨 앱. 손가락 추첨, 순서 뽑기, 사다리타기, 돌림판, 3D 주사위, 로또, 오목·체스·장기까지.">
+  <meta property="og:title" content="갓차갓차 GotchaGotcha">
+  <meta property="og:description" content="손가락 하나로 정하는 파티 추첨 앱">
+  <meta property="og:image" content="https://bitandplay.github.io/gotchagotcha/img/dice-cover.jpg">
+  <style>
+    :root { --bg: #0b1026; --card: #141b3a; --fg: #eceff4; --muted: #a0a6b8; --gold: #ffc857; --line: #252c4a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(1200px 700px at 30% -10%, #4a2366 0%, transparent 60%), var(--bg); color: var(--fg);
+           font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    main { max-width: 960px; margin: 0 auto; padding: 56px 16px 64px; }
+    .hero { text-align: center; }
+    .logo { font-size: 64px; line-height: 1; }
+    h1 { font-size: clamp(36px, 8vw, 56px); margin: 12px 0 4px; color: var(--gold); letter-spacing: -1px; }
+    .tag { font-size: clamp(18px, 4vw, 22px); margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 auto 28px; max-width: 560px; }
+    .btn { display: inline-block; background: var(--gold); color: #1a1a2e; font-weight: 700; text-decoration: none; padding: 14px 28px; border-radius: 999px; }
+    .note { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+    .shots { display: flex; gap: 16px; justify-content: center; align-items: flex-end; margin: 48px 0; flex-wrap: wrap; }
+    .shots img { border-radius: 20px; border: 1px solid var(--line); max-width: 100%; height: auto; box-shadow: 0 12px 40px rgba(0,0,0,.4); }
+    .shots .cover { width: 240px; } .shots .main { width: 520px; }
+    h2 { font-size: 22px; margin: 48px 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+    .tile { background: var(--card); border-radius: 16px; padding: 18px 12px; text-align: center; }
+    .tile b { display: block; font-size: 36px; line-height: 1.2; }
+    .tile span { font-weight: 600; }
+    .tile small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+    ul.points { padding-left: 20px; } ul.points li { margin: 6px 0; }
+    footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+    footer a { color: var(--gold); }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="logo">👆🎰</div>
+    <h1>갓차갓차</h1>
+    <p class="tag">누가 걸릴까? 손가락 하나로 정하는 파티 추첨</p>
+    <p class="sub">모두 화면에 손가락을 올리면 한 명이 걸립니다. 순서 정하기, 팀 나누기, 내기, 보드게임까지 모임에 필요한 추첨을 한 앱에 담았어요.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.gotchagotcha">Google Play 에서 받기</a>
+    <span class="note">Android · 무료 · 곧 정식 출시</span>
+  </section>
+
+  <div class="shots">
+    <img class="cover" src="img/dice-cover.jpg" alt="3D 주사위 화면 (폴드 커버 화면)" width="240" height="379" loading="lazy">
+    <img class="main" src="img/dice-main.jpg" alt="3D 주사위 화면 (폴드 펼친 화면)" width="520" height="393" loading="lazy">
+  </div>
+
+  <h2>12가지 추첨과 게임</h2>
+  <div class="grid">
+    <div class="tile"><b>👆</b><span>손가락 추첨</span><small>당첨·꼴찌·순위·팀</small></div>
+    <div class="tile"><b>🎰</b><span>순서 뽑기</span><small>슬롯머신 릴</small></div>
+    <div class="tile"><b>🪜</b><span>사다리타기</span><small>당첨·꽝 결과 직접 입력</small></div>
+    <div class="tile"><b>🎡</b><span>돌림판</span><small>이름 넣고 돌리기</small></div>
+    <div class="tile"><b>🎲</b><span>3D 주사위</span><small>흔들어서 굴리기</small></div>
+    <div class="tile"><b>🪙</b><span>동전 던지기</span><small>앞·뒤 기록</small></div>
+    <div class="tile"><b>🎱</b><span>로또 번호</span><small>추첨기 물리 연출</small></div>
+    <div class="tile"><b>👥</b><span>팀 나누기</span><small>공평하게 랜덤</small></div>
+    <div class="tile"><b>🔢</b><span>업다운</span><small>숫자 맞히기</small></div>
+    <div class="tile"><b>⚫</b><span>오목</span><small>둘이서 한 폰으로</small></div>
+    <div class="tile"><b>♟️</b><span>체스</span><small>둘이서 한 폰으로</small></div>
+    <div class="tile"><b>🀄</b><span>장기</span><small>둘이서 한 폰으로</small></div>
+  </div>
+
+  <h2>이런 점이 좋아요</h2>
+  <ul class="points">
+    <li>가입·로그인 없이 바로 시작, 입력한 이름은 기기 안에만 저장</li>
+    <li>갤럭시 Z 폴드 커버·펼친 화면과 태블릿에 맞춘 레이아웃</li>
+    <li>한국어·영어·일본어·중국어 등 15개 언어</li>
+    <li>개발자 후원 한 번이면 광고 없이</li>
+  </ul>
+
+  <footer>
+    <span>© 2026 bitandplay</span>
+    <a href="/privacy-policy/">개인정보처리방침 · Privacy Policy</a>
+    <a href="mailto:dualistmage@naver.com">문의</a>
+  </footer>
+</main>
+</body>
+</html>
